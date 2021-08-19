@@ -7,7 +7,7 @@
 <body>
   <script>
       let userName = prompt("username:"," ");
-      if(userName == "Admin") {
+      if(userName === "Admin") {
 
       }else if (userName == null){
           alert("cancel");
@@ -16,16 +16,13 @@
       }
 
       let password = prompt("password :"," ")
-      if (password == "TheMaster"){
+      if (password === "TheMaster"){
           alert("Welcome")
       }else if (password == null){
           alert("cancel")
       }else{
           alert("wrong password !!!")
       }
-
-
-
   </script>
 </body>
 </html>
