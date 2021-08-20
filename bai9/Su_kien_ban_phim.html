@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc hanh su kien tu ban phim</title>
+</head>
+<body onload="docReady()">
+    <form>
+        <img id="nobita" src="nobita.jpg" style="position: absolute;left: 0px;top: 0px;" width="300"/>
+    </form>
+
+    <script>
+        //nhan phim len
+        function upArrowPressed() {
+            let element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+        }
+        //nhan phim xuong
+        function downArrowPressed() {
+            var element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+        }
+        //nhan phim sang trai
+        function leftArrowPressed() {
+            var element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+        }
+        //nhan phim sang phai
+        function rightArrowPressed() {
+            var element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+        }
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    leftArrowPressed();
+                    break;
+                case 39:
+                    rightArrowPressed();
+                    break;
+                case 38:
+                    upArrowPressed();
+                    break;
+                case 40:
+                    downArrowPressed();
+                    break;
+            }
+        }
+        function docReady() {
+            window.addEventListener('keydown', moveSelection);
+        }
+
+
+    </script>
+</body>
+</html>
