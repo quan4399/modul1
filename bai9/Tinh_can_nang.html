@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc hanh tinh can nang</title>
+</head>
+<body>
+        <label>
+        <p>Can nang <input type="number" id="weight"></p>
+        </label>
+        <label>
+        <p>Chieu cao <input type="number" id="height"></p>
+        </label>
+        <p id="result"><input type="button" value="Tinh" onclick="tinhBMI()"/></p>
+
+    <script>
+        function tinhBMI() {
+            let Weight = parseInt(document.getElementById("weight").value);
+            let Height = parseInt(document.getElementById("height").value);
+            let bmi = (Weight/(Height*Height));
+
+            if  (bmi < 18)
+                document.getElementById("result").innerHTML = "Underweight";
+            else if (bmi < 25.0)
+                document.getElementById("result").innerHTML = "Normal";
+            else if (bmi < 30.0)
+                document.getElementById("result").innerHTML = "Overweight";
+            else
+                document.getElementById("result").innerHTML = "Obese";
+        }
+    </script>
+</body>
+</html>
