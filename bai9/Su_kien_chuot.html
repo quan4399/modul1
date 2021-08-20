@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc hanh su kien chuot</title>
+</head>
+<body>
+  <form>
+      <img id="myImage" src="myBall.jpg" style="width: 300px" alt="image Ball"/>
+      <p>Click button below to image move right</p>
+      <input type="button" value="Click me" onclick="moveRight();"/>
+  </form>
+  <script>
+      let imgObject = null;
+      imgObject = document.getElementById("myImage");
+      function init() {
+          imgObject = document.getElementById("myImage");
+          imgObject.style.position = "relative";
+          imgObject.style.left = "0px";
+      }
+      function moveRight() {
+          imgObject.style.left = parseInt(imgObject.style.left) + 100 + "px";
+      }
+      window.onload = init;//load lai trang
+  </script>
+</body>
+</html>
