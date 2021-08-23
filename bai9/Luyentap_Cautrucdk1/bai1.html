@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra a%b???</title>
+</head>
+<body>
+<label for="a">a <input type="number" id="a"></label>
+<label for="b">b <input type="number" id="b"></label>
+<input type="button" onclick="check()" value="check">
+<p id="result"></p>
+
+<script>
+    function check() {
+        let a = document.getElementById("a").value;
+        let b =document.getElementById("b").value;
+        let c = a % b;
+
+        if (c === 0){
+            document.getElementById("result").innerHTML= "a chia het cho b";
+        }else {
+            document.getElementById("result").innerHTML= "a khong chia het cho b";
+        }
+    }
+</script>
+</body>
+</html>
