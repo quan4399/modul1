@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so lon nhat trong ba so</title>
+</head>
+<body>
+    <label for="a"> a <input type="number" id="a"></label><br><br>
+    <label for="b"> b <input type="number" id="b"></label><br><br>
+    <label for="c"> c <input type="number" id="c"></label><br><br>
+    <input type="button" value="check" onclick="Check()">
+    <p id="result"></p>
+    
+    <script>
+        function Check() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let c = parseInt(document.getElementById("c").value);
+            let max = a ;
+
+            if (max<b && b>c){
+                parseInt(document.getElementById("result").innerHTML = "b = " + b + "   la so lon nhat");
+            }else if (max<c && b<c){
+                parseInt(document.getElementById("result").innerHTML = "c = " + c + "   la so lon nhat");
+            }else{
+                parseInt(document.getElementById("result").innerHTML = "a = " + a + "    la so lon nhat");
+            }
+
+        }
+    </script>
+</body>
+</html>
