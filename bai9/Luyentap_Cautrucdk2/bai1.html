@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi nhiet do</title>
+</head>
+<body>
+    <h2>chuyển đổi độ c sang độ f</h2>
+    <label for="c">Nhâp độ C <input type="number" id="c"></label><br><br>
+    <input type="button" value="chuyển đổi" onclick="changeCel()">
+    <h3>kết quả <h4 id="result"></h4></h3>
+    <script>
+        function changeCel() {
+            let c = parseFloat(document.getElementById("c").value);
+            let f = c * 1.8 +32;
+
+            document.getElementById("result").innerHTML = f + "độ F";
+        }
+    </script>
+</body>
+</html>
