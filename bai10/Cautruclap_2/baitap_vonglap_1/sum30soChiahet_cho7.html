@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let sum = 0;
+        let count = 0;
+        for (let i =0;  ; i++)
+        {
+            if (count < 30){
+                if (i % 7 === 0 ){
+                    sum = sum + i;
+                    count ++;
+                    document.write(i + " ");
+                }
+            }else {
+                break;
+            }
+
+        }
+        document.write("sum =" + sum);
+
+        /*let count = 0;
+          let sum = 0;
+          let i =1;
+          while(count < 30){
+                if(i % 7 === 0){
+                    count++ ;
+                    sum +=i ;
+                }
+                i++:
+          }
+          document.write(sum);
+         */
+    </script>
+</body>
+</html>

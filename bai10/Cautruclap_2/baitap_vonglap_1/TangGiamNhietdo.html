@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input;
+    do{
+        input = parseFloat(prompt("Nhập nhiệt độ"));
+        if (input > 100){
+            alert("Hãy giảm nhiệt độ");
+        }
+        if (input < 20){
+            alert("Hãy tăng nhiệt độ");
+        }
+    }while (input > 100 || input < 20)
+    alert("nhiệt độ bthg !");
+
+</script>
+</body>
+</html>
