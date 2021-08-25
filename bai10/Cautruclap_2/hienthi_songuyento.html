@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>chuong trinh kiem tra SNT</title>
 </head>
 <body>
-$END$
+    <script>
+      function KiemtraSNT(numbers) {
+          for (let i = 2; i < numbers; i++ ){
+              if (numbers % i === 0){
+                  return false;
+              }
+          }
+          return true;
+      }
+
+
+
+        let numbers = 20; //so luong so nguyen to can in ra
+        let count   = 0; // dem so luong so nguyen to
+        let N = 2; //so can kiem tra sau moi lan lap N =N + 1
+
+        while(count < numbers) {
+            if (KiemtraSNT(N)) {
+                document.write(N + " ");
+                count++;
+            }
+            N = N + 1;
+
+        }
+
+    </script>
 </body>
 </html>

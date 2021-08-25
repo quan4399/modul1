@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game doan so</title>
+    <button onclick="playGame()">Play</button>
+</head>
+<body>
+    <script>
+        function playGame() {
+            let min = parseInt(prompt("so bé nhat la:"));
+            let max = parseInt(prompt("so lớn nhat la:"));
+            let num = Math.floor(Math.random() * (max - min)) + min;
+            //Mathfloor là làm tròn , Math.random là nó sẽ random một khảng từ min tới max
+            let count = 1;
+            let guestNum;
+
+            do{
+                guestNum = parseInt(prompt("số bạn đoán :"));
+                if(guestNum < num){
+                    alert("Nhập số lớn hơn vào !");
+                }else if(guestNum > num){
+                    alert("Nhập số nhỏ hơn vào !");
+                }
+                count ++
+            }while(guestNum !== num && count <= 3)
+            if (guestNum === num){
+                alert("bạn đã đoán đúng");
+            }else{
+                alert("rất tiếc đã sai");
+            }
+        }
+    </script>
+</body>
+</html>
