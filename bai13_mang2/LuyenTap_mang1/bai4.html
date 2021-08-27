@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó</h3>
+<p>array = [1,2,3,4,5,6,7,8,9,10];</p>
+<br>
+<br>
+
+<script>
+    let array = [1,2,3,4,5,6,7,8,9,10];
+    let first = 0;
+    let last = array.length - 1;
+
+    while (first < last){
+        array[first] = array[last];
+        first ++;
+        last --;
+
+    }document.write("mang sau khi dao nguoc " + array)
+</script>
+</body>
+</html>
