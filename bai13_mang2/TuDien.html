@@ -11,18 +11,23 @@
 <p id="result"></p>
 
 <script>
-    function check1() {
-        let array = [["one","two","three", "four" ,"five","six"], //
-                     ["một","hai","ba",     "bốn",  "năm", "sáu"]];
-        let input = document.getElementById("array").value;
+    let array = [["one","two","three", "four" ,"five","six"], //
+        ["một","hai","ba",     "bốn",  "năm", "sáu"]];
 
+
+    function check1() {
+        let input = document.getElementById("array").value;
         for (let i = 0; i < input.length; i++){
-            if (input[0] === input[i])
+            if (input === input[i])
                 document.getElementById("result").innerHTML = " không có trong từ điển "
         }
         for (let i =0 ; i < array[0].length; i++) {
             if (input === array[0][i])// nhap vao = gtri trong mang dau tien vitri la i
                 document.getElementById("result").innerHTML = array[1][i] //tra ve gia tri trong mang t2 vtr la i
+
+        }for (let i =0 ; i < array[0].length; i++) {
+            if (input === array[1][i])// nhap vao = gtri trong mang dau tien vitri la i
+                document.getElementById("result").innerHTML = array[0][i] //tra ve gia tri trong mang t1 vtr la i
 
         }
     }
