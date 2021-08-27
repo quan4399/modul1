@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
+<h3>Viết chương trình đếm số nguyên âm trong một chuỗi</h3>
+    array = [-3,-2,-1,0,6,9,-7]
+<br><br>
+<script>
+    let array = [-3,-2,-1,0,6,9,-7]
+    let count = 0;
 
+    for (let i = 0; i < array.length; i++){
+        if( array[i]<0){
+            count += 1;
+        }
+    }
+    document.write(count)
+</script>
 </body>
 </html>
