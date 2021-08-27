@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
+<h3>Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+    Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó</h3>
+    array = [1,2,3,4,5,6,7,8,9,10]<br><br><br>
+<script>
+    let array = [1,2,3,4,5,6,7,8,9,10];
+    let max = array[0];
+    let count ;
 
+    for (let i = 0; i < array.length; i++ ){
+        if (array[i] > max){
+            max = array[i];
+            count = i;
+        }
+    }document.write("So lon nhat trong mang la " + max + " o vi tri i = " + count );
+</script>
 </body>
 </html>
