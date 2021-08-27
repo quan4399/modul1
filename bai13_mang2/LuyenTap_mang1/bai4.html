@@ -16,7 +16,9 @@
     let last = array.length - 1;
 
     while (first < last){
+        let a = array[first];
         array[first] = array[last];
+        array[last] = a;
         first ++;
         last --;
 
