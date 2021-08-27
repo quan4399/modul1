@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let num= +prompt("Nhap vao day la so bat ky");
+    let str = num.toString();
+    let result = [str[0]];
+
+    for(let i = 1; i < str.length; i ++)
+    {
+        if((str[i-1]%2 === 0)&&(str[i]%2 === 0)) //kiem tra 2 phan tu thu i va i+1 lien nhau co chia het cho 2 ko
+        {
+            result.push('-', str[i]); //neu dung thi tra ve mang co -
+        }
+        else
+        {
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(''));
+</script>
 </body>
 </html>
