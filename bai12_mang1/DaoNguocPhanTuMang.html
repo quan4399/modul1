@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+  <script>
+      let x = [-3,5,1,3,2,10]
+      let first = 0;// Bien duyet tu phan tu dau tien trong mang
+      let last = x.length - 1 ;// bien nay de duyet phan tu cuoi cung trong mang
+      //doi vi tri thang dau tien voi thang cuoi cung
+
+      while (first < last) {
+          let b = x[first];
+          x[first] = x[last];
+          x[last] = b;
+          first++;
+          last--;
+      }document.write(x);
+  </script>
 </body>
 </html>
