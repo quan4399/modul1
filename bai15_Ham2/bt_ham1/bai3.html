@@ -8,6 +8,9 @@
 Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.<br>
     Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số<br>
 <script>
+    let num1 = +prompt("Nhập số thứ nhất");
+    let num2 = +prompt("Nhâp số thứ hai");
+    let process = inputNumber(num1 , num2);
     function inputNumber(a , b) {
         if (a > b){
             alert("Số thứ nhất lớn hơn số thứ 2")
@@ -15,9 +18,7 @@ Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nh�
             return a + b ;
         }
     }
-    let num1 = +prompt("Nhập số thứ nhất");
-    let num2 = +prompt("Nhâp số thứ hai");
-    let process = inputNumber(num1 , num2);
+
     alert("Tổng hai số = " + process)
 </script>
 </body>
