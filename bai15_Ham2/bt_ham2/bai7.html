@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó <br>
+<body>
+<script>
+    let a = +prompt("Nhập số thứ nhất");
+    let b = +prompt("Nhập số thứ hai");
+
+    function daoNguoc(a , b) {
+        let temp = a;
+        a = b;
+        b = temp;
+        alert("a = " + a +", b = " + b);
+    }daoNguoc(a,b)
+
+
+
+    //function daoNguoc(a, b){
+    //           return ("a = " + b + " , b = " + a )
+    // }alert(daoNguoc(a, b))
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false
+<br>
+
+<script>
+    let input = +prompt("Nhập bất kỳ :");
+    function check(string) {
+        if (string % 1 === 0){
+            return true; // 213e3123 = true ???
+        }else
+            return false;
+    }
+    alert(check(input));
+</script>
+</body>
+</html>
