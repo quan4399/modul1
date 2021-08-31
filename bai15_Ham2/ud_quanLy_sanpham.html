@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang index</title>
+</head>
+<body>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+
+
+</style>
+
+<h3>Add New Product</h3>
+<table border="0" id="form-add">
+    <tr>
+        <td>
+            <input type="text" id="input" placeholder="New Product">
+        </td>
+        <td>
+            <button id="btnAdd" onclick="addProduct()">Add</button>
+            <button id="btnEdit" hidden onclick="editProduct()">Edit</button>
+        </td>
+    </tr>
+    <tr>
+        <td><h3>Display All Product</h3></td>
+    </tr>
+    <tr>
+        <td colspan="2"><h4>Product Name</h4></td>
+        <td colspan="1" id="totalProduct"></td> <td>product</td>
+    </tr>
+</table>
+    <tr>
+
+    </tr>
+<table>
+    <tbody id="listProduct">
+
+    </tbody>
+</table>
+
+
+<script>
+    let products = [];
+
+    //tao ham hien thi
+    function displayList() {
+        let html = " ";
+        for (let i = 0; i < products.length; i++){
+            html += "<tr>"
+                html += "<td>"
+                    html += products[i];
+                html += "</td>"
+                html += "<td>"
+                    html += '<button onclick="editProduct(' + i + ')">Edit</button>'
+                    html += '<button onclick="deleteProduct(' + i +')">Delete</button>'
+                html += "</td>"
+            html += "</tr>"
+        }
+        document.getElementById("listProduct").innerHTML = html;
+        document.getElementById("totalProduct").innerHTML = products.length + "";
+    }
+    displayList();
+    
+    //ham them moi 
+    function addProduct() {
+        let input = document.getElementById("input").value;
+        let product = [input];
+        products.push(product);
+        console.log(products);
+        displayList();
+    }
+    
+    //ham sua va update
+    function editProduct(i) {
+        let productEdit = products[i];
+        document.getElementById("input").value = productEdit[0];
+        document.getElementById("btnEdit").hidden = false;
+        document.getElementById("btnAdd").hidden = true;
+        displayList();
+    }
+
+    //ham xoa
+    function deleteProduct(i) {
+        if (confirm('Are you sure?')) {
+            products.splice(i, 1);
+            displayList();
+        }
+    }
+</script>
+</body>
+</html>
