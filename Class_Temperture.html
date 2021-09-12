@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  class Temperature{
+    constructor(celious) {
+      this.celious = celious;
+    }
+    convertF(){
+      return (this.celious * 1.8) + 32;
+    }
+    convertK(){
+      return this.celious + 273.15;
+    }
+  }
+  let result = new Temperature(30);
+  document.write(result.convertF() + "<br>");
+  document.write(result.convertK());
+</script>
+</body>
+</html>
